@@ -67,5 +67,9 @@ public class Main{
         //Метод drive(double km) → зменшує паливо
         //Метод refuel(double liters) → додає паливо
         //💡 Подумай про початковий рівень пального та перевірку, чи вистачає його.
+//        Car car = new Car("Toyota", "Camry", 50,false);
+//        car.startEngine();
+//        car.refuel(20);
+//        car.drive(200);
     }
 }
