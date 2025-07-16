@@ -60,5 +60,12 @@ public class Main{
 //        account.printBalance();
 //        account.withdraw(1000);
 //        account.printBalance();
+
+        //6. 🚗 Поля: brand, model, fuel, isRunning
+        //Реалізуй:
+        //Метод startEngine() → запускає авто, змінює isRunning
+        //Метод drive(double km) → зменшує паливо
+        //Метод refuel(double liters) → додає паливо
+        //💡 Подумай про початковий рівень пального та перевірку, чи вистачає його.
     }
 }
