@@ -21,9 +21,13 @@ public class Library {
         }
     }
 
-    public ArrayList<Book> findBooksByAuthor(String author){
-        ArrayList<Book> found_books = new ArrayList<Book>();
-        found_books = books.stream().filter(book -> book.getAuthor().equals(author)).collect(Collectors.toCollection(ArrayList::new));
-        return found_books;
+    public Library findBooksByAuthor(String author){
+        ArrayList<Book> found_books = books.stream().filter(book -> book.getAuthor().equals(author)).collect(Collectors.toCollection(ArrayList::new));
+        Library library = new Library();
+        for(Book book:found_books){
+            library.addBook(book);
+        }
+
+        return library;
     }
 }

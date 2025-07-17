@@ -254,6 +254,20 @@ public class Main {
         //Метод addBook(Book book)
         //Метод printAllBooks()
         //Метод findBooksByAuthor(String author)
+        Book book1 = new Book("Book1", "Author1",2017);
+        Book book2 = new Book("Book2", "Author2",2007);
+        Book book3 = new Book("Book3","Author1",2021);
 
+        Library library = new Library();
+
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+
+        library.printAllBooks();
+
+        Library found_books = library.findBooksByAuthor("Author1");
+        System.out.println("Found books by the author");
+        found_books.printAllBooks();
     }
 }
