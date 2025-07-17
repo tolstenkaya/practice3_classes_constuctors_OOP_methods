@@ -1,3 +1,6 @@
+import Person_Address.Address;
+import Person_Address.Person;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
@@ -172,66 +175,75 @@ public class Main {
         //kelvinToCelsius(double k)
         //👉 Практика методів без об'єктного стану.
 
-        Scanner scan = new Scanner(System.in);
-        TemperatureConverter converter = new TemperatureConverter();
+//        Scanner scan = new Scanner(System.in);
+//        TemperatureConverter converter = new TemperatureConverter();
+//
+//        int option = 0;
+//        do{
+//            System.out.println();
+//            System.out.println("Menu");
+//            System.out.println("1 - Celsius to Fahrenheit");
+//            System.out.println("2 - Celsius to Kelvin");
+//            System.out.println("3 - Fahrenheit to Celsius");
+//            System.out.println("4 - Kelvin to Celsius");
+//            System.out.println();
+//
+//            System.out.print("Choose option: ");
+//            option = scan.nextInt();
+//            scan.nextLine();
+//
+//            switch (option){
+//                case 1:{
+//                    System.out.println();
+//                    System.out.print("Enter celsius: ");
+//                    double celsius = scan.nextDouble();
+//                    double fahrenheit = converter.celsiusToFahrenheit(celsius);
+//                    System.out.println("Fahrenheit: "+fahrenheit);
+//                    break;
+//                }
+//                case 2:{
+//                    System.out.println();
+//                    System.out.print("Enter celsius: ");
+//                    double celsius = scan.nextDouble();
+//                    double kelvin = converter.celsiusToKelvin(celsius);
+//                    System.out.println("Kelvin: "+kelvin);
+//                    break;
+//                }
+//                case 3:{
+//                    System.out.println();
+//                    System.out.print("Enter fahrenheit: ");
+//                    double fahrenheit = scan.nextDouble();
+//                    double celsius = converter.fahrenheitToCelsius(fahrenheit);
+//                    System.out.println("Celsius: "+celsius);
+//                    break;
+//                }
+//                case 4:{
+//                    System.out.println();
+//                    System.out.print("Enter kelvin: ");
+//                    double kelvin = scan.nextDouble();
+//                    double celsius = converter.kelvinToCelsius(kelvin);
+//                    System.out.println("Celsius: "+celsius);
+//                    break;
+//                }
+//                case 0:{
+//                    break;
+//                }
+//                default:{
+//                    System.out.println("Entered symbol is incorrect. Try again.");
+//                }
+//            }
+//
+//        }while(option!=0);
 
-        int option = 0;
-        do{
-            System.out.println();
-            System.out.println("Menu");
-            System.out.println("1 - Celsius to Fahrenheit");
-            System.out.println("2 - Celsius to Kelvin");
-            System.out.println("3 - Fahrenheit to Celsius");
-            System.out.println("4 - Kelvin to Celsius");
-            System.out.println();
-
-            System.out.print("Choose option: ");
-            option = scan.nextInt();
-            scan.nextLine();
-
-            switch (option){
-                case 1:{
-                    System.out.println();
-                    System.out.print("Enter celsius: ");
-                    double celsius = scan.nextDouble();
-                    double fahrenheit = converter.celsiusToFahrenheit(celsius);
-                    System.out.println("Fahrenheit: "+fahrenheit);
-                    break;
-                }
-                case 2:{
-                    System.out.println();
-                    System.out.print("Enter celsius: ");
-                    double celsius = scan.nextDouble();
-                    double kelvin = converter.celsiusToKelvin(celsius);
-                    System.out.println("Kelvin: "+kelvin);
-                    break;
-                }
-                case 3:{
-                    System.out.println();
-                    System.out.print("Enter fahrenheit: ");
-                    double fahrenheit = scan.nextDouble();
-                    double celsius = converter.fahrenheitToCelsius(fahrenheit);
-                    System.out.println("Celsius: "+celsius);
-                    break;
-                }
-                case 4:{
-                    System.out.println();
-                    System.out.print("Enter kelvin: ");
-                    double kelvin = scan.nextDouble();
-                    double celsius = converter.kelvinToCelsius(kelvin);
-                    System.out.println("Celsius: "+celsius);
-                    break;
-                }
-                case 0:{
-                    break;
-                }
-                default:{
-                    System.out.println("Entered symbol is incorrect. Try again.");
-                }
-            }
-
-        }while(option!=0);
-
-
+        //9. Person + Address (композиція)
+        //👥 Створи 2 класи:
+        //Person: name, age, Address address
+        //Address: street, city, zipCode
+        //👉 Це приклад композиції (has-a
+        //Метод printFullInfo() → виводить все, включаючи адресу
+        //Покажи, як працює об'єкт в об'єкті
+        Address address = new Address("Oleksandra Polya, 27d", "Dnipro", "49000");
+        Person person = new Person("Alyona", 24, address);
+        person.printInfo();
     }
 }
