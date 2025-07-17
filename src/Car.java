@@ -12,8 +12,13 @@ public class Car {
     }
 
     void startEngine(){
-        this.isRunning=true;
-        System.out.println("The car is started");
+        if(fuel>0){
+            this.isRunning=true;
+            System.out.println("The car is started");
+        }else{
+            System.out.println("Not enough fuel");
+        }
+
     }
 
     void drive(double km){
@@ -25,6 +30,7 @@ public class Car {
             System.out.println("There is only enough fuel for "+max_distance+". You need to fill with fuel");
         }else{
             fuel-=liters_spent;
+            System.out.println("Let`s go!");
             System.out.println("Traveled: "+km+" km. Remaining fuel: "+fuel+" l");
         }
     }
