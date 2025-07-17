@@ -242,8 +242,18 @@ public class Main {
         //👉 Це приклад композиції (has-a
         //Метод printFullInfo() → виводить все, включаючи адресу
         //Покажи, як працює об'єкт в об'єкті
-        Address address = new Address("Oleksandra Polya, 27d", "Dnipro", "49000");
-        Person person = new Person("Alyona", 24, address);
-        person.printInfo();
+//        Address address = new Address("Oleksandra Polya, 27d", "Dnipro", "49000");
+//        Person person = new Person("Alyona", 24, address);
+//        person.printInfo();
+
+        //10.  Library + список об'єктів
+        //📚 Створи:
+        //Клас Book (як у завданні 1)
+        //Клас Library, що має:
+        //Поле ArrayList<Book> books
+        //Метод addBook(Book book)
+        //Метод printAllBooks()
+        //Метод findBooksByAuthor(String author)
+
     }
 }
